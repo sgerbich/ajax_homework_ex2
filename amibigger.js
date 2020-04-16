@@ -1,15 +1,15 @@
 function amIBigger(x){
-    y = new Promise((resolve, reject), function(){
+   var y = new Promise(function(resolve, reject){
         if(x>50){
             resolve(x + " > 50");
         }else if(x= 50){
-            resolve(num + " = 50");
+            resolve(x + " = 50");
         }else{
-            reject(num + " < 50");
+            reject(x + " < 50");
         }
     })
     return y;
 }
-amIBigger(70).then(result, function(){console.log(result)}).catch(reject, function(){console.log(reject)});
-amIBigger(50).then(result, function(){console.log(result)}).catch(reject, function(){console.log(reject)});
-amIBigger(4).then(result, function(){console.log(result)}).catch(reject, function(){console.log(reject)});
+amIBigger(70).then(function(result){console.log(result)}).catch(function(reject){console.log(reject)});
+amIBigger(50).then(function(result){console.log(result)}).catch(function(reject){console.log(reject)});
+amIBigger(4).then(function(result){console.log(result)}).catch(function(reject){console.log(reject)});
